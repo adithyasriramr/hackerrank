@@ -1,0 +1,7 @@
+n,r=map(int, input().split())#to take multiple inputs in the same line
+arr=list(map(int,input().split(' ')[:n]))#to take a list of numbers in one line
+res=[]
+for i in range(n):
+  index=(i+r)%n
+  res.append(arr[index])
+print(*res)# * symbol to print the elements in the same line
