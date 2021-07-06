@@ -1,0 +1,16 @@
+n=int(input("Enter the number of clouds:"))
+arr=list(map(int,input().split(' ')[:n]))#to take a list of numbers in one line
+move=0
+i=0
+for i in range(n-2):
+  if arr[i]==0 and arr[i+1]==0 and arr[i+2]==0:
+    move+=1
+    i+=2
+  elif arr[i]==0 and arr[i+1]==0 and arr[i+2]==1:
+    move+=1
+    i+=1
+  elif arr[i]==0 and arr[i+1]==1 and arr[i+2]==0:
+    move+=1
+    i+=2
+print(move-1)
+    
