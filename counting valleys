@@ -1,0 +1,13 @@
+n=int(input("Enter the number of steps:"))
+str=input("Enter the steps:")
+height=0
+c=0
+for i in range(n):
+  if str[i]=='U':
+    height+=1
+  elif str[i]=='D':
+    height-=1
+  if height==0 and prev_height<0:
+    c+=1
+  prev_height=height
+print(c)
