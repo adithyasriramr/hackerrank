@@ -1,0 +1,15 @@
+n=int(input())
+arr=list(map(int,input().split(' ')[:n]))
+def twoswap(arr,n):
+    swap=0
+    lst=sorted(arr)#sorted function does not modify the original list, sort does
+    for i in range(n):
+        temp=min(arr[i:])
+        loc=arr.index(temp)
+        if arr[i]>arr[loc]:
+            arr[i],arr[loc]=arr[loc],arr[i]
+            swap+=1
+        elif lst==arr:
+            break
+    return swap
+print(twoswap(arr,n))
