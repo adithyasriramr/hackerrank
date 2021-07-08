@@ -1,0 +1,10 @@
+n=int(input())
+squares=list(map(int,input().split(' ')[:n]))
+d,m=map(int,input().split(' '))
+def getWays(squares, d, m): 
+    count = 0    
+    for i in range(0,len(squares)+1-m):
+        if sum(squares[i:i+m]) == d:
+            count+=1
+    return count
+print(getWays(squares,d,m))
