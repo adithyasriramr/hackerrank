@@ -1,43 +1,8 @@
-#5
-#2 1 2 1 2
-#2 - total no. of pairs of same numbers
 n=int(input())
-sum=0
-count=0
-y=""
-arr=[]
-lst=[]
-str=input()
-o=0
-#to get into input in the same line as string and to convert it into int list
+arr=sorted(list(map(int,input().split(' ')[:n])))
+s=0
 i=0
-while i<(len(str)-1):
-  if str[i]!=" " and str[i+1]!=" ":
-    y=str[i]+str[i+1]
-    z=int(y)
-    lst.append(z)
-    i+=2
-    y=""
-  elif str[i]!=" ":
-    y=str[i]
-    z=int(y)
-    lst.append(z)
-    i+=1
-  elif str[i]==" ":
-    i+=1
-for i in range(len(lst)):
-  if lst[i]<10:
-    o=o+1
-if o>0:
-  y=str[len(str)-1]
-  z=int(y)
-  lst.append(z)
-arr=lst
-for i in range(len(arr)):
-    if arr[i]!=0:
-      for j in range(i+1,len(arr)):
-        if arr[i]==arr[j]:
-          count+=1
-          arr[j]=0
-          break
-print(count)
+while i<n:
+    s+=(arr.count(arr[i])//2)
+    i+=arr.count(arr[i])
+print(s)
