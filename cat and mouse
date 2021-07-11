@@ -1,0 +1,10 @@
+n=int(input())
+for i in range(n):
+    arr=list(map(int,input().split(' ')[:3]))
+    if abs(arr[0]-arr[2])>abs(arr[1]-arr[2]):
+        print("Cat B")
+    elif abs(arr[0]-arr[2])<abs(arr[1]-arr[2]):
+        print("Cat A")
+    elif abs(arr[0]-arr[2])==abs(arr[1]-arr[2]):
+        print("Mouse C")
+        
