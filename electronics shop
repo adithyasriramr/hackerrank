@@ -1,0 +1,12 @@
+b,n,m = [int(x) for x in input().split()]#to take several inputs in one line
+key=list(map(int,input().split(' ')[:n]))
+usb=list(map(int,input().split(' ')[:m]))
+res=[]
+for i in key:
+    for j in usb:
+        if i+j<=b:
+            res.append(i+j)
+if len(res)==0:
+    print("-1")
+else:
+    print(max(res))   
