@@ -1,0 +1,4 @@
+t=int(input())
+for i in range(t):
+    n,m,s = [int(x) for x in input().split()]#multiple inputs in the same line
+    print(((s - 1 + m - 1) % n) + 1)
