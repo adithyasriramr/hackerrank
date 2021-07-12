@@ -1,0 +1,10 @@
+n=int(input())
+arr=sorted(list(map(int,input().split(' ')[:n])))
+count=0
+res=[]
+for i in range(n-1):
+    count=arr.count(arr[i])
+    if abs(arr[i]-arr[i+1])==1:
+        count+=arr.count(arr[i+1])
+    res.append(count)
+print(max(res))
