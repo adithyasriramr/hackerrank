@@ -1,0 +1,12 @@
+from collections import deque
+n,r,q=[int(x) for x in input().split()]#multiple inputs in the same line
+arr=list(map(int,input().split(' ')[:n]))
+query=[]
+for i in range(q):
+    y=int(input())
+    query.append(y)
+arr=deque(arr)#to rotate the array
+arr.rotate(r)#to rotate the array, if left then -r
+arr=list(arr)#to rotate the array
+for i in range(q):
+    print(arr[query[i]])
