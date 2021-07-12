@@ -1,0 +1,10 @@
+n=int(input())
+scores=sorted(list(map(int,input().split(' ')[:n])),reverse=False)
+scores=list(dict.fromkeys(scores))#removing duplicates by converting to a dictionary and then to a list
+m=int(input())
+player=list(map(int,input().split(' ')[:m]))
+for i in range(m):
+    scores.append(player[i])
+    scores.sort(reverse=True)
+    scores=list(dict.fromkeys(scores))
+    print((scores.index(player[i]))+1)
