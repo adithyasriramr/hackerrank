@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int d1,m1,y1,fine=0;
+    cin>>d1>>m1>>y1;
+    int d2,m2,y2;
+    cin>>d2>>m2>>y2;
+    int c1=d1-d2,c2=m1-m2,c3=y1-y2;
+    if(c1==0 && c2==0 && c3==0){
+        cout<<"0";
+    }
+    else if(c3>0){
+        cout<<"10000";
+    }
+    else if(c1<0 && c2>0 && c3==0){
+        fine=500*(c2);
+        cout<<fine;
+    }
+    else if(c1>0 && c2>0 && c3==0){
+        fine=500*(c2);
+        cout<<fine;
+    }
+    else if(c1>0 && c2==0 && c3==0){
+        fine=15*(c1);
+        cout<<fine;
+    }
+    else if(c1<0 | c2<0 | c3<0){
+        cout<<"0";
+    }
+}
