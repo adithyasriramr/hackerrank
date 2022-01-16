@@ -1,0 +1,8 @@
+def equalizeArray(arr,n):
+    # Write your code here
+    count=0
+    for i in arr:
+        x=arr.count(i)
+        if count<x:
+            count=x
+    return n-count
